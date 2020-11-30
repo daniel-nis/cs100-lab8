@@ -3,8 +3,8 @@
 
 #include <stack>
 
-#include "../lab03/base.hpp"
-#include "../lab04/container.hpp"
+#include "header/base.hpp"
+#include "header/container.hpp"
 
 class Base;
 
