@@ -11,6 +11,22 @@ class Op : public Base {
         Op(double value) : Base() { val = value; }
         virtual double evaluate() { return val; }
         virtual std::string stringify() { return std::to_string(val); }
+	
+	Iterator* create_iterator() {
+                return new NullIterator(this);
+        }
+
+        Base* get_left() {
+                return nullptr;
+        }
+        Base* get_right() {
+                return nullptr;
+        }
+
+        void accept(CountVisitor* count) {
+                count->visit_op();
+        }
+
 };
 
 #endif //__OP_HPP__
