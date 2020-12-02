@@ -1,6 +1,8 @@
 #ifndef __COUNT_VISITOR_HPP__
 #define __COUNT_VISITOR_HPP__
 
+#include "iterator.hpp"
+
 class CountVisitor{
     private:
         int ops;

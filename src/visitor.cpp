@@ -1,7 +1,8 @@
 #ifndef _COUNT_VISITOR_CPP_
 #define _COUNT_VISITOR_CPP_
 
-#include "visitor.hpp"
+#include "../visitor.hpp"
+#include "../header/iterator_test.hpp"
 
 CountVisitor::CountVisitor() {
     ops = 0;

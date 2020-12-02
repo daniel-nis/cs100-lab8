@@ -1,3 +1,5 @@
+#ifndef __BINARY_ITERATOR_CPP__
+#define __BINARY_ITERATOR_CPP__
 
 #include "iterator.hpp"
 
@@ -34,3 +36,5 @@ Base* BinaryIterator::current() {
     }
     return nullptr;
 }
+
+#endif
