@@ -3,6 +3,7 @@
 
 #include "base.hpp"
 #include "op.hpp"
+#include "../binary_iterator.cpp"
 
 class Add : public Op {
     protected:

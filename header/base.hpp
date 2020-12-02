@@ -5,7 +5,7 @@
 #include "../visitor.hpp"
 #include <string>
 
-//class Iterator;
+class Iterator;
 
 class Base {
     protected:
