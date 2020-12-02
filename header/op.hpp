@@ -13,18 +13,19 @@ class Op : public Base {
         virtual std::string stringify() { return std::to_string(val); }
 	
 	Iterator* create_iterator() {
-                return new NullIterator(this);
-        }
+	    NullIterator* ni = new NullIterator(this);
+	    return ni;
+	}
 
         Base* get_left() {
-                return nullptr;
+            return nullptr;
         }
         Base* get_right() {
-                return nullptr;
+            return nullptr;
         }
 
         void accept(CountVisitor* count) {
-                count->visit_op();
+            count->visit_op();
         }
 
 };

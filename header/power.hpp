@@ -18,10 +18,10 @@ class Power : public Op {
         virtual std::string stringify() {
             return left->stringify() + "**" + right->stringify();
         }
-
 	Iterator* create_iterator() {
-                return new BinaryIterator(this);
-        }
+		BinaryIterator* bi = new BinaryIterator(this);
+		return bi;
+	}
 
         Base* get_left() {
                 return left;

@@ -1,3 +1,6 @@
+#ifndef _COUNT_VISITOR_CPP_
+#define _COUNT_VISITOR_CPP_
+
 #include "visitor.hpp"
 
 CountVisitor::CountVisitor() {
@@ -8,7 +11,6 @@ CountVisitor::CountVisitor() {
     add = 0;
     sub = 0;
     pow = 0;
-    
 }
 
 void CountVisitor::visit_op() {
@@ -54,3 +56,4 @@ int CountVisitor::pow_count() {
     return pow;
 }
 
+#endif

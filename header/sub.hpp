@@ -18,7 +18,8 @@ class Sub : public Base {
 	}
 
 	Iterator* create_iterator() {
-		return new BinaryIterator(this);
+		BinaryIterator* bi = new BinaryIterator(this);
+		return bi;
 	}
         
         Base* get_left() {
@@ -32,5 +33,6 @@ class Sub : public Base {
         void accept(CountVisitor* count) {
                 count->visit_sub();
         }
-
+        
+};
 #endif

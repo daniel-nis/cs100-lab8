@@ -19,7 +19,8 @@ class Mult : public Op {
         }
 	
 	Iterator* create_iterator() {
-		return new BinaryIterator(this);
+		BinaryIterator* bi = new BinaryIterator(this);
+		return bi;
 	}
 
 	Base* get_left() {
