@@ -10,6 +10,24 @@
 #include "div.hpp"
 #include "mult.hpp"
 
+TEST(GetChild, OpGetChild){
+    Base* num1 = new Op(3);
+
+    EXPECT_EQ(num1->get_left(), nullptr);
+    EXPECT_EQ(num1->get_right(), nullptr);
+}
+
+
+TEST(GetChild, PowGetChild){
+    Base* num1 = new Op(3);
+    Base* num2 = new Op(7);
+    Power* temp = new Power(num1, num2);
+
+    EXPECT_EQ(temp->get_left(), num1);
+    EXPECT_EQ(temp->get_right(), num2);
+}
+
+
 TEST(IteratorTest, PowBinaryTest){
     Base* num1 = new Op(3);
     Base* num2 = new Op(7);
