@@ -17,7 +17,6 @@ TEST(GetChild, OpGetChild){
     EXPECT_EQ(num1->get_right(), nullptr);
 }
 
-
 TEST(GetChild, PowGetChild){
     Base* num1 = new Op(3);
     Base* num2 = new Op(7);
@@ -27,6 +26,41 @@ TEST(GetChild, PowGetChild){
     EXPECT_EQ(temp->get_right(), num2);
 }
 
+TEST(GetChild, AddGetChild){
+    Base* num1 = new Op(2);
+    Base* num2 = new Op(6);
+    Add* temp = new Add(num1, num2);
+
+    EXPECT_EQ(temp->get_left(), num1);
+    EXPECT_EQ(temp->get_right(), num2);
+}
+
+TEST(GetChild, SubGetChild){
+    Base* num1 = new Op(4);
+    Base* num2 = new Op(6);
+    Sub* temp = new Sub(num1, num2);
+
+    EXPECT_EQ(temp->get_left(), num1);
+    EXPECT_EQ(temp->get_right(), num2);
+}
+
+TEST(GetChild, MultGetChild){
+    Base* num1 = new Op(2);
+    Base* num2 = new Op(1);
+    Mult* temp = new Mult(num1, num2);
+
+    EXPECT_EQ(temp->get_left(), num1);
+    EXPECT_EQ(temp->get_right(), num2);
+}
+
+TEST(GetChild, DivGetChild){
+    Base* num1 = new Op(5);
+    Base* num2 = new Op(8);
+    Div* temp = new Div(num1, num2);
+
+    EXPECT_EQ(temp->get_left(), num1);
+    EXPECT_EQ(temp->get_right(), num2);
+}
 
 TEST(IteratorTest, PowBinaryTest){
     Base* num1 = new Op(3);
